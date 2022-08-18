@@ -1,0 +1,22 @@
+<main class="container">
+  <section
+    class="card animate__animated animate__bounceInDown"
+    *ngFor="let gif of resultado"
+  >
+    <article class="container-img">
+      <img
+        loading="lazy"
+        [src]="gif.images.downsized_medium.url"
+        [alt]="gif.title"
+      />
+    </article>
+    <article class="container-content">
+      <div class="container-title">
+        <p>{{ gif.title }}</p>
+      </div>
+      <div class="container-description">
+        <p></p>
+      </div>
+    </article>
+  </section>
+</main>

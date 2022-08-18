@@ -1,0 +1,54 @@
+$header-color: #121212;
+$breakpoints: (
+    fold: 415px,
+    lg : 530px
+);
+
+
+@mixin media-up($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: $header-color;
+    color: white;
+    .container {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        
+        .logo {
+            font-size: 25px;
+            background: #25CC0F;
+            background: linear-gradient(to bottom right, #25CC0F 0%, #2115CF 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @include media-up(lg){
+                display: none;
+            }
+            .title2 {
+                background: #CFCF13;
+                background: linear-gradient(to bottom right, #CFCF13 0%, #CF0000 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .menu {
+            width: 60%;
+            @include media-up(lg){
+                width: 88%;
+            }
+        }
+        .btn-container {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
