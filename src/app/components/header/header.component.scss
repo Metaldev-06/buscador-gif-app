@@ -26,16 +26,15 @@ $breakpoints: (
         
         .logo {
             font-size: 25px;
-            background: #25CC0F;
-            background: linear-gradient(to bottom right, #25CC0F 0%, #2115CF 100%);
+            background: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            user-select: none;
             @include media-up(lg){
                 display: none;
             }
             .title2 {
-                background: #CFCF13;
-                background: linear-gradient(to bottom right, #CFCF13 0%, #CF0000 100%);
+                background: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -49,6 +48,7 @@ $breakpoints: (
         .btn-container {
             width: 50px;
             height: 50px;
+            user-select: none;
         }
     }
 }

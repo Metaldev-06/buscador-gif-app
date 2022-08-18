@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { HeaderModule } from './components/header/header.module';
 import { ResultadosComponent } from './components/resultados/resultados.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AsideComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    PaginationComponent
   ],
   imports: [
     HttpClientModule,

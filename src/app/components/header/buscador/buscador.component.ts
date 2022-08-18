@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GifService } from 'src/app/service/gif.service';
+import { Analytics } from '../../../interface/gifs';
 
 @Component({
   selector: 'app-buscador',
@@ -19,6 +20,10 @@ export class BuscadorComponent {
 
     this.gifService.buscarGif(valor);
     this.txtBuscar.nativeElement.value = '';
+    
+    // this.gifService.resultado.map( (gif ) => {
+    //   console.log(gif.user = gif.user || "No hay información");
+    // } );
   }
 
 }

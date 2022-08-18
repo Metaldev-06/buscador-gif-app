@@ -35,8 +35,7 @@ $breakpoints: (
         .container-img {
             width: 100%;
             height: 300px;
-            // min-height: 300px;
-            // max-height: 350px;
+            position: relative;
             img {
                 width: 100%;
                 height: 100%;
@@ -50,9 +49,44 @@ $breakpoints: (
             .container-title {
                 padding: 10px 0;
             }
+            .container-description {
+                
+                img {
+                    width: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .usuario {
+                    position: absolute;
+                    bottom: 62px;
+                    left: 3px;
+                    display: none;
+                    padding: 10px;
+                    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+                    border-radius: 8px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        color: white;
+                        text-decoration: none;
+                        justify-content: center;
+
+                    }
+
+                }
+            }
         }
     }
     .card:hover {
         box-shadow: 1px 1px 20px rgba(115, 115, 115, 0.837);
+        .container-content {
+            .container-description {
+                .usuario {
+                    display: block;
+                }
+            }
+        }
     }
 }

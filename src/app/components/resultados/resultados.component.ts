@@ -11,7 +11,8 @@ export class ResultadosComponent {
   get resultado() {
     return this.gifsService.resultado;
   }
+
   constructor( private gifsService: GifService ) { }
   
-
+  valor: string = '../../../assets/img/icons8-puzzled.gif';
 }

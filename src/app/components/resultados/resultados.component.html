@@ -4,18 +4,25 @@
     *ngFor="let gif of resultado"
   >
     <article class="container-img">
-      <img
-        loading="lazy"
-        [src]="gif.images.downsized_medium.url"
-        [alt]="gif.title"
-      />
+      <a [href]="gif.images.downsized_medium.url" target="_blank">
+        <img
+          loading="lazy"
+          [src]="gif.images.downsized_medium.url"
+          [alt]="gif.title"
+        />
+      </a>
     </article>
     <article class="container-content">
       <div class="container-title">
-        <p>{{ gif.title }}</p>
+        <p>{{ gif.title | titlecase }}</p>
       </div>
       <div class="container-description">
-        <p></p>
+        <p class="usuario">
+          <a [href]="gif.user ? gif.user.profile_url : null" target="_blank">
+            <img [src]="gif.user ? gif.user.avatar_url : valor" />
+            {{ gif.username || "Desconocido" }}
+          </a>
+        </p>
       </div>
     </article>
   </section>
