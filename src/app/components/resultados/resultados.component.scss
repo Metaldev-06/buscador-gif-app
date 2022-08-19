@@ -24,10 +24,13 @@ $breakpoints: (
     }
     .card {
         width: 20%;
-        min-width: 200px;
+        min-width: 300px;
         background-color: #2C2C2C;
         border-radius: 8px;
         overflow: hidden;
+        a{
+            text-decoration: none;
+        }
         @include media-up(fold){
             width: 90%;
             min-width: none;
@@ -42,51 +45,93 @@ $breakpoints: (
                 object-fit: cover;
                 object-position: center;
             }
-        }
-        .container-content {
-            color: white;
-            padding: 10px;
-            .container-title {
-                padding: 10px 0;
-            }
-            .container-description {
-                
+            .usuario {
+                position: absolute;
+                bottom: 3px;
+                left: 3px;
+                display: none;
+                background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+                border-radius: 8px;
                 img {
                     width: 30px;
                     border-radius: 50%;
                     object-fit: cover;
                     object-position: center;
                 }
-                .usuario {
-                    position: absolute;
-                    bottom: 62px;
-                    left: 3px;
-                    display: none;
-                    padding: 10px;
-                    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-                    border-radius: 8px;
-                    a {
-                        display: flex;
-                        align-items: center;
-                        gap: 5px;
-                        color: white;
-                        text-decoration: none;
-                        justify-content: center;
-
-                    }
-
+                a {
+                    display: flex;
+                    align-items: center;
+                    padding: 15px;
+                    gap: 5px;
+                    color: white;
+                    text-decoration: none;
+                    justify-content: center;
                 }
             }
+            .usuario:hover {
+                background-image: linear-gradient(144deg,#9e39e6, #4a36cb 50%,#00afbb);
+            }
+            .usuario:active { 
+                transform: scale(0.9);
+                background-image: linear-gradient(144deg,#8931c7, #3a2a9f 50%,#007f88);
+            }
+            .redes {
+                display: none;
+                position: absolute;
+                // padding: 10px;
+                bottom: 3px;
+                right: 4px;
+                background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+                border-radius: 8px;
+                a {
+                    padding: 20px;
+                    color: white;
+                    font-size: 48px;
+                }
+            }
+            .redes:hover { 
+                background-image: linear-gradient(144deg,#9e39e6, #4a36cb 50%,#00afbb);
+            }
+            .redes:active { 
+                transform: scale(0.9);
+                background-image: linear-gradient(144deg,#8931c7, #3a2a9f 50%,#007f88);
+            }
+        }
+        .container-content {
+            color: white;
+            padding: 10px;
+            .container-title {
+                font-weight: bold;
+                padding: 10px 0;
+            }
+            // .container-description {
+            //     // display: none;
+            //     color: rgb(170, 170, 170);
+            //     text-align: center;
+            //     padding: 10px;
+            //     border-top: 1px solid rgb(170, 170, 170);
+            // }
         }
     }
     .card:hover {
         box-shadow: 1px 1px 20px rgba(115, 115, 115, 0.837);
-        .container-content {
-            .container-description {
-                .usuario {
-                    display: block;
-                }
+        .container-img {
+            .usuario {
+                display: block;
             }
+            .redes {
+                display: block;
+            }
+
         }
+        // .container-content {
+        //     .container-title {
+
+        //     }
+        //     .container-description {
+        //         display: flex;
+        //         align-self: stretch;
+        //     }
+        // }
     }
 }
