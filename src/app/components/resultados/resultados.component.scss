@@ -3,14 +3,11 @@ $breakpoints: (
     lg : 530px,
     xl : 442px
 );
-
-
 @mixin media-up($breakpoint) {
     @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
         @content;
     }
 }
-
 .container {
     width: 100%;
     margin: 13vh 0;
@@ -78,7 +75,6 @@ $breakpoints: (
             .redes {
                 display: none;
                 position: absolute;
-                // padding: 10px;
                 bottom: 3px;
                 right: 4px;
                 background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
@@ -104,13 +100,6 @@ $breakpoints: (
                 font-weight: bold;
                 padding: 10px 0;
             }
-            // .container-description {
-            //     // display: none;
-            //     color: rgb(170, 170, 170);
-            //     text-align: center;
-            //     padding: 10px;
-            //     border-top: 1px solid rgb(170, 170, 170);
-            // }
         }
     }
     .card:hover {
@@ -122,16 +111,6 @@ $breakpoints: (
             .redes {
                 display: block;
             }
-
         }
-        // .container-content {
-        //     .container-title {
-
-        //     }
-        //     .container-description {
-        //         display: flex;
-        //         align-self: stretch;
-        //     }
-        // }
     }
 }

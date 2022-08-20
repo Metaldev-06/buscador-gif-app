@@ -22,10 +22,15 @@ export class PaginationComponent implements OnInit, OnDestroy {
   }
 
   paginationNext() {
-    this.gifsService.paginationNext(12);
+    if (parseInt(this.gifsService.pag) >= 0) {
+      this.gifsService.paginationNext(12);
+    }
   }
 
   paginationPrev() {
-    this.gifsService.paginationPrev(12);
+    if (parseInt(this.gifsService.pag) >= 12) {
+      this.gifsService.paginationPrev(12);
+    }
   }
+
 }
