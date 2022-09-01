@@ -1,3 +1,14 @@
+$breakpoints: (
+    fold: 442px,
+    lg : 530px,
+    xl : 442px
+);
+@mixin media-up($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
 .container-pagination {
     width: 100%;
     height: 10vh;
@@ -5,6 +16,9 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    @include media-up(fold){
+        gap: 10px;
+    }
     .btn {
         align-items: center;
         background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
@@ -26,6 +40,9 @@
         white-space: nowrap;
         cursor: pointer;
         transition: all .3s;
+        @include media-up(fold){
+            min-width: 110px;
+        }
     }
     .btn:active,
     .btn:hover {
